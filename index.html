@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Website</title>
+</head>
+
+<body>
+    <h1>Welcome to our Real Estate Website!</h1>
+    <button onclick="redirectTo('search')">Search</button>
+    <button onclick="redirectTo('buy')">Buy</button>
+    <button onclick="redirectTo('sell')">Sell</button>
+    <button onclick="redirectTo('rent')">Rent</button>
+    <button onclick="redirectTo('lease')">Lease</button>
+    <button onclick="redirectTo('about')">About Us</button>
+    <button onclick="redirectTo('contact')">Contact Us</button>
+
+    <script>
+        function redirectTo(page) {
+            if (isNewUser()) {
+                window.location.href = 'signup.html';
+            } else {
+                window.location.href = 'login.html';
+            }
+
+            function isNewUser() {
+                // Check if the user is new or existing
+                return true; // For demonstration, always consider as a new user
+            }
+        }
+    </script>
+</body>
+
+</html>
